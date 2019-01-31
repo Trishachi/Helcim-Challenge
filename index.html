@@ -338,6 +338,19 @@
     .main-overview {
         grid-template-columns: 65% 33%;
     }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+
+    .left-side {
+      margin-right: 10px;
+    }
+
+    .right-side {
+      margin-left: 10px;
+    }
   }
     </style>
   </head>
@@ -420,46 +433,48 @@
         </div>
         <div class="main-cards">
           <div class="card">
-            <div class="left-side">
-              <h3>Recurring Plan Information</h3>
-              <ul>
-                <li class="info-list-item">Automatic Recurring: Active</li>
-                <li class="info-list-item">Name: Cliff Gustapho <a href="#">(link)</a></li>
-                <li class="info-list-item">Code/SKU: 4564687989 <a href="#">(link)</a></li>
-              </ul>
-              <h3>Default Amounts</h3>
-              <ul>
-                <li class="info-list-item">Initial Amount: $98.00</li>
-                <li class="info-list-item">Recurring Amount: $23.00</li>
-                <li class="info-list-item">Taxable: Full Tax</li>
-                <li class="info-list-item">Tax Location: Merchant Terminal</li>
-              </ul>
-              <h3>Description</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
-            </div>
-            <div class="right-side">
-              <h3>Trial Settings</h3>
-              <ul>
-                <li class="info-list-item">Trial Period Days: 5 Days</li>
-                <li class="info-list-item">Trial Auto Subscribe: Active</li>
-              </ul>
-              <h3>Customer Portal Settings</h3>
-              <ul>
-                <li class="info-list-item">Show in Customer Portal: Inactive</li>
-                <li class="info-list-item">Editable: Active</li>
-                <li class="info-list-item">Cancelable: Inactive</li>
-              </ul>
-              <h3>Advanced Settings</h3>
-              <ul>
-                <li class="info-list-item">Bill On: Bill on First Cycle</li>
-                <li class="info-list-item">Billing Method: Cycle Based</li>
-                <li class="info-list-item">Token: 4b8c759a5e91dbc63d0763</li>
-                <li class="info-list-item">Currency: CAD - Canadian Dollar</li>
-                <li class="info-list-item">Terminal Cards: Demo Terminal - CAD</li>
-                <li class="info-list-item">Terminal EFT/ACH: t65748y5y5</li>
-              </ul>
+            <div class="wrapper">
+              <div class="left-side">
+                <h3>Recurring Plan Information</h3>
+                <ul>
+                  <li class="info-list-item">Automatic Recurring: Active</li>
+                  <li class="info-list-item">Name: Cliff Gustapho <a href="#">(link)</a></li>
+                  <li class="info-list-item">Code/SKU: 4564687989 <a href="#">(link)</a></li>
+                </ul>
+                <h3>Default Amounts</h3>
+                <ul>
+                  <li class="info-list-item">Initial Amount: $98.00</li>
+                  <li class="info-list-item">Recurring Amount: $23.00</li>
+                  <li class="info-list-item">Taxable: Full Tax</li>
+                  <li class="info-list-item">Tax Location: Merchant Terminal</li>
+                </ul>
+                <h3>Description</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
+              </div>
+              <div class="right-side">
+                <h3>Trial Settings</h3>
+                <ul>
+                  <li class="info-list-item">Trial Period Days: 5 Days</li>
+                  <li class="info-list-item">Trial Auto Subscribe: Active</li>
+                </ul>
+                <h3>Customer Portal Settings</h3>
+                <ul>
+                  <li class="info-list-item">Show in Customer Portal: Inactive</li>
+                  <li class="info-list-item">Editable: Active</li>
+                  <li class="info-list-item">Cancelable: Inactive</li>
+                </ul>
+                <h3>Advanced Settings</h3>
+                <ul>
+                  <li class="info-list-item">Bill On: Bill on First Cycle</li>
+                  <li class="info-list-item">Billing Method: Cycle Based</li>
+                  <li class="info-list-item">Token: 4b8c759a5e91dbc63d0763</li>
+                  <li class="info-list-item">Currency: CAD - Canadian Dollar</li>
+                  <li class="info-list-item">Terminal Cards: Demo Terminal - CAD</li>
+                  <li class="info-list-item">Terminal EFT/ACH: t65748y5y5</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="card">
