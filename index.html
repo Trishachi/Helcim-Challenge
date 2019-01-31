@@ -260,12 +260,11 @@
 
   /*  Dashboard Tab Section Styles*/
   /*  Tab Styles */
-
   .tab {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
-}
+  }
 /* Style the buttons inside the tab */
 .tablink {
   background-color: inherit;
@@ -294,6 +293,11 @@
   width: 100%;
   padding-top: 20px;
   margin-top: 20px;
+}
+
+input[type="date"] {
+  width: 100px;
+  font-size: 0.75em;
 }
 
 
@@ -393,7 +397,7 @@
             <div class="tab">
               <button id="defaultOpen" class="tablink" onclick="openSubscription('activeSubs', this)">Monthly Active Subscription</button>
               <button class="tablink" onclick="openSubscription('newSubs', this)">Net-New Subscription</button>
-              <button class="tablink"><i class="fas fa-calendar-alt"></i> Change</button>
+              <button class="tablink"><i class="fas fa-calendar-alt"></i> <input type="date"/> Change</button>
             </div>
             <!-- Tab content -->
             <div id="activeSubs" class="tabcontent">
