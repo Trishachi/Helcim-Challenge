@@ -33,7 +33,7 @@
   .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 1fr 50px;
+    grid-template-rows: 70px 1fr 50px;
     grid-template-areas:
       "header"
       "main"
@@ -142,6 +142,14 @@
     margin-left: 42px;
   }
 
+  .header_title p {
+    margin-bottom: 0;
+  }
+
+  .header_title h1 {
+    margin-top: 0;
+  }
+
   .sidenav_list {
   padding: 0;
   margin-top: 40px;
@@ -171,6 +179,10 @@
 
   .hide {
     display: none;
+  }
+
+  .drop {
+    margin-left: 40px;
   }
 
 
@@ -298,7 +310,7 @@
   .grid-container {
     display: grid;
     grid-template-columns: 240px 1fr;
-    grid-template-rows: 50px 1fr 50px;
+    grid-template-rows: 70px 1fr 50px;
     grid-template-areas:
       "sidenav header"
       "sidenav main"
@@ -337,7 +349,7 @@
       </div>
       <header class="header">
         <div class="header_title">
-          <!-- <p> Recurring</p> -->
+          <p class="title"> Recurring</p>
           <h1>Plan Dashboard</h1>
         </div>
         <button type="button" class="header_button">See Plan Logs</button>
@@ -359,7 +371,7 @@
           <li class="sidenav_list-item">Products</li>
           <li class="sidenav_list-item">Online Store</li>
           <li class="sidenav_list-item">Payment Pages</li>
-          <li class="sidenav_list-item" onclick="subMenu()">Recurring</li>
+          <li class="sidenav_list-item" onclick="subMenu()">Recurring  <span class="drop"><i class="fas fa-angle-right"></i></span></li>
             <ul id="dropDown" class="dropdownContent">
               <li class="sidenav_list-item sublist-item">New Plan</li>
               <li class="sidenav_list-item sublist-item">Recurring Settings</li>
