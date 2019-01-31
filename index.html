@@ -203,6 +203,7 @@
     -webkit-column-break-inside: avoid;
     padding: 24px;
     box-sizing: border-box;
+    border-radius: 5px;
   }
 
   /* .overviewCard:first-child {
@@ -237,16 +238,7 @@
     -webkit-column-break-inside: avoid;
     padding: 24px;
     box-sizing: border-box;
-  }
-
-  /* .card:first-child {
-  height: 480px;
-  } */
-  .card:nth-child(2) {
-    height: 230px;
-  }
-  .card:nth-child(3) {
-    height: 230px;
+    border-radius: 5px;
   }
 
   .overviewCard ul,
@@ -299,7 +291,9 @@
 }
 
 .tabcontent img {
-  padding-top: 10px;
+  width: 100%;
+  padding-top: 20px;
+  margin-top: 20px;
 }
 
 
@@ -332,24 +326,22 @@
   @media only screen and (min-width: 65.625em){
     .main-cards {
       /* column-count: 2; */
-      grid-template-columns: 65% 33%;
+      grid-template-columns: 2fr 1fr;
       }
 
     .main-overview {
-        grid-template-columns: 65% 33%;
+        grid-template-columns: 2fr 1fr;
     }
 
     .wrapper {
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 1.5em;
     }
 
-    .left-side {
-      margin-right: 10px;
-    }
-
-    .right-side {
-      margin-left: 10px;
+    .card1 {
+      grid-column: 1/2;
+      grid-row: 1/3;
     }
   }
     </style>
@@ -405,10 +397,10 @@
             </div>
             <!-- Tab content -->
             <div id="activeSubs" class="tabcontent">
-              <img src="bars-chart.svg" alt="Dashboard Chart" />
+              <img src="https://www.thesaascfo.com/wp-content/uploads/2017/05/Committed-Monthly-Recurring-Revenue-Chart.png" alt="Dashboard Chart" />
             </div>
             <div id="newSubs" class="tabcontent">
-              <img src="bar-chart.svg" alt="Dashboard Chart" />
+              <img src="https://plot.ly/~PythonPlotBot/2632/control-vs-experimental.png" alt="Dashboard Chart" />
             </div>
           </div>
           <div class="overviewCard">
@@ -432,7 +424,7 @@
           </div>
         </div>
         <div class="main-cards">
-          <div class="card">
+          <div class="card card1">
             <div class="wrapper">
               <div class="left-side">
                 <h3>Recurring Plan Information</h3>
@@ -477,13 +469,13 @@
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card card2">
             <div class="center">
               <i class="fas fa-user-clock"></i>
               <h3>Active Subscribers</h3>
             </div>
          </div>
-          <div class="card">
+          <div class="card card3">
             <div class="center">
               <i class="fas fa-user-check"></i>
               <h3>New Subscribers</h3>
