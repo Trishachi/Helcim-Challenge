@@ -20,6 +20,15 @@
       box-sizing: border-box;
     }
 
+    h1 {
+      font-size: 1.5em;
+    }
+
+    a {
+      text-decoration: none;
+      color: #48b5e4;
+    }
+
   /* Grid instructions for parent grid container */
   .grid-container {
     display: grid;
@@ -184,9 +193,9 @@
     box-sizing: border-box;
   }
 
-  .overviewCard:first-child {
+  /* .overviewCard:first-child {
   height: 480px;
-  }
+  } */
 
   .overviewCard ul {
     margin-top: 0;
@@ -245,8 +254,44 @@
     font-size: 3em;
   }
 
-  /* Styles for non mobile devices */
+  /*  Dashboard Tab Section Styles*/
+  /*  Tab Styles */
 
+  .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+/* Style the buttons inside the tab */
+.tablink {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 1em;
+}
+
+.tablink:hover {
+  background-color: #ddd;
+}
+
+.tablink:active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.tabcontent img {
+  padding-top: 10px;
+}
+
+
+  /* Styles for non mobile devices */
   /*  750px breakpoint */
 @media only screen and (min-width: 46.875em){
   /*  Show sidebar on non-mobile devices */
@@ -327,7 +372,19 @@
       <main class="main">
         <div class="main-overview">
           <div class="overviewCard">
-            <img src="bars-chart.svg" alt="Dashboard Chart" />
+            <!-- Tab links -->
+            <div class="tab">
+              <button id="defaultOpen" class="tablink" onclick="openSubscription('activeSubs', this)">Monthly Active Subscription</button>
+              <button class="tablink" onclick="openSubscription('newSubs', this)">Net-New Subscription</button>
+              <button class="tablink"><i class="fas fa-calendar-alt"></i> Change</button>
+            </div>
+            <!-- Tab content -->
+            <div id="activeSubs" class="tabcontent">
+              <img src="bars-chart.svg" alt="Dashboard Chart" />
+            </div>
+            <div id="newSubs" class="tabcontent">
+              <img src="bar-chart.svg" alt="Dashboard Chart" />
+            </div>
           </div>
           <div class="overviewCard">
             <h3>Manage Plans</h3>
@@ -441,6 +498,21 @@
         });
 
         ///////// Dashboard Grapgh Section Tab toggle scripts /////////
+        function openSubscription(pageName,elmnt) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+          document.getElementById(pageName).style.display = "block";
+          elmnt.style.backgroundColor = "#ccc";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
 
         ///////// Recurring Menu toggle scripts /////////
         const toggleMenu = document.getElementById('dropDown');
